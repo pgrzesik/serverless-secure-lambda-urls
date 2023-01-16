@@ -1,0 +1,12 @@
+service: serverless-secure-furl
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  hello:
+    handler: src/handler.hello
+    url:
+      authorizer: aws_iam
